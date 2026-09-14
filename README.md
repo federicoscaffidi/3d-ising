@@ -36,7 +36,7 @@ Initial Energy: -24.0
 Initial Magnetization: 0.074
 ```
 
-Full headless run time: <TODO: Federico — measured wall time; see the value reported at the end of the Phase 2 rework, or re-run the command above with `time`>. All Monte Carlo loops are pure Python, so this is minutes, not seconds.
+Full headless run time: 853 s wall (≈14 min) on an Apple-silicon Mac, measured 2026-09-14 with the command above; all Monte Carlo loops are pure Python. The run produced all 8 figures with no errors.
 
 The notebook seeds NumPy's global RNG once (`np.random.seed(0)`), so a top-to-bottom run reproduces every figure exactly. The figures in the Release-asset HTML predate that seed and will differ in detail.
 
