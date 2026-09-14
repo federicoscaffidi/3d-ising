@@ -1,0 +1,9 @@
+# Generated from the imports in 3d_ising.ipynb (numpy, matplotlib; `math` is stdlib).
+# Versions are the ones installed in the project venv (Python 3.13.12) on 2026-09-14,
+# the environment in which the notebook was verified to run. None are guessed.
+numpy==2.5.3
+matplotlib==3.11.2
+
+# Not imported by the notebook, but needed to open/execute it from the venv.
+ipykernel==7.3.0
+nbconvert==7.17.1

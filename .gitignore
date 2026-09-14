@@ -1,0 +1,16 @@
+# local environment (see README quickstart)
+.venv/
+
+# Jupyter / Python junk
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
+
+# rendered / executed results live outside the repo (GitHub Release asset), never in git
+*.html
+runs/
+
+# result data types, should any cell start writing them
+*.npz
+*.npy
+*.csv
