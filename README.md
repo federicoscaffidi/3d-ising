@@ -6,7 +6,7 @@ Course project for *Stochastic Processes and Simulations in Natural Sciences* �
 
 ## Headline result
 
-<TODO: Federico — one sentence stating the main finding. The notebook's markdown reads the ferromagnetic–paramagnetic transition off the ⟨|m|⟩(T) curves at T ≈ 4.5 (J/k_B units), but no cell computes an estimate of T_c; to quote a number here you would need to add e.g. a susceptibility-peak or Binder-cumulant estimate and run it.>
+Magnetization-vs-temperature curves from Metropolis and Wolff sampling on L = 6, 8, 10 lattices place the ferromagnetic–paramagnetic transition near T ≈ 4.5 (J/k_B), consistent with T_c ≈ 4.5115 [5]. Read off the curves by eye; no numerical T_c estimate is computed.
 
 All eight figures are embedded in `3d_ising.ipynb`, produced by a single seeded top-to-bottom run (execution counts 1–22) in the environment described below; simulation parameters are tabulated in Appendix B of the notebook.
 
