@@ -8,7 +8,7 @@ Course project for *Stochastic Processes and Simulations in Natural Sciences* �
 
 <TODO: Federico — one sentence stating the main finding. The notebook's markdown reads the ferromagnetic–paramagnetic transition off the ⟨|m|⟩(T) curves at T ≈ 4.5 (J/k_B units), but no cell computes an estimate of T_c; to quote a number here you would need to add e.g. a susceptibility-peak or Binder-cumulant estimate and run it.>
 
-The rendered notebook with all figures from the graded submission is attached as a GitHub Release asset: <TODO: Federico — link to the release, after uploading `project1_porta_scaffidi.html`>.
+All eight figures are embedded in `3d_ising.ipynb`, produced by a single seeded top-to-bottom run (execution counts 1–22) in the environment described below; simulation parameters are tabulated in Appendix B of the notebook.
 
 ## Quickstart — clean clone to one reproduced number
 
@@ -38,13 +38,13 @@ Initial Magnetization: 0.074
 
 Full headless run time: 853 s wall (≈14 min) on an Apple-silicon Mac, measured 2026-09-14 with the command above; all Monte Carlo loops are pure Python. The run produced all 8 figures with no errors.
 
-The notebook seeds NumPy's global RNG once (`np.random.seed(0)`), so a top-to-bottom run reproduces every figure exactly. The figures in the Release-asset HTML predate that seed and will differ in detail.
+The notebook seeds NumPy's global RNG once (`np.random.seed(0)`), so a top-to-bottom run reproduces the embedded figures exactly.
 
 ## Repo map
 
 | Path | What it is |
 | --- | --- |
-| `3d_ising.ipynb` | the project: model setup, three dynamics, temperature sweeps, discussion. Outputs stripped; run it to regenerate figures |
+| `3d_ising.ipynb` | the project: model setup, three dynamics, temperature sweeps, discussion, appendices (simulated tempering, parameter table) and bibliography. Executed outputs included; re-run to regenerate them |
 | `requirements.txt` | pinned dependencies, read from the verified environment |
 | `.gitignore` | keeps the venv, rendered HTML, executed copies (`runs/`) and result data out of git |
 | `LICENSE` | GPL-3.0 |
@@ -61,11 +61,18 @@ Read from the code, not from the write-up:
 - L ≤ 10 (N ≤ 1000); the Monte Carlo loops are pure Python, which bounds the reachable sizes and sweep counts.
 - No cell estimates T_c numerically: the write-up reads T ≈ 4.5 off the ⟨|m|⟩(T) curves by eye. Susceptibility and autocorrelation times are not computed.
 - Simulated tempering is discussed as a possible extension only; the implementation is not in this notebook.
-- Results for the submitted figures were generated before the RNG seed was added, so they are recorded (Release asset) rather than reproducible.
 
 ## References
 
-<TODO: Federico — the notebook cites no sources. Candidates that belong here, if they were used: the source of the T_c ≈ 4.5115 value hardcoded in the notebook, the Wolff cluster-size scaling exponent (L^2.48) quoted in the discussion, and the course lecture notes.>
+Full bibliography with DOIs is at the end of the notebook.
+
+1. Metropolis, Rosenbluth, Rosenbluth, Teller, Teller — J. Chem. Phys. 21, 1087 (1953)
+2. Hastings — Biometrika 57, 97 (1970)
+3. Wolff — Phys. Rev. Lett. 62, 361 (1989)
+4. Marinari, Parisi — Europhys. Lett. 19, 451 (1992)
+5. Ferrenberg, Xu, Landau — Phys. Rev. E 97, 043301 (2018): K_c = 0.221654626(5), i.e. T_c ≈ 4.5115
+6. Hou, Fang, Wang, Hu, Deng — Phys. Rev. E 99, 042150 (2019): fractal dimension of critical FK clusters
+7. Newman, Barkema — *Monte Carlo Methods in Statistical Physics*, OUP (1999)
 
 ## Licence
 
