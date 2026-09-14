@@ -59,7 +59,7 @@ Read from the code, not from the write-up:
 
 - One Monte Carlo run per temperature; means are taken over autocorrelated samples and no error bars are computed.
 - L ≤ 10 (N ≤ 1000); the Monte Carlo loops are pure Python, which bounds the reachable sizes and sweep counts.
-- No cell estimates T_c, computes the magnetic susceptibility, or measures autocorrelation times, although the write-up refers to all three. <TODO: Federico — either add those cells or reword the notebook's abstract/conclusions.>
+- No cell estimates T_c numerically: the write-up reads T ≈ 4.5 off the ⟨|m|⟩(T) curves by eye. Susceptibility and autocorrelation times are not computed.
 - Simulated tempering is discussed as a possible extension only; the implementation is not in this notebook.
 - Results for the submitted figures were generated before the RNG seed was added, so they are recorded (Release asset) rather than reproducible.
 
